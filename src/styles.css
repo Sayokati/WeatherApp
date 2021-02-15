@@ -1,0 +1,55 @@
+body {
+  color: #3ca2c3;
+  display: block;
+  font-family: "Open Sans", sans-serif;
+  margin: 80px;
+  padding: 20px 0px 20px 0px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  margin: 0;
+}
+ul {
+  display: block;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.weather-app {
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/paper.png");
+  border: solid #abb6be 1px;
+  border-radius: 10px;
+  margin: 20px auto;
+  max-width: 800px;
+  padding: 20px;
+  position: center;
+  width: 430px;
+}
+.actual-temperature {
+  font-size: 48px;
+  line-height: 1;
+  text-align: center;
+}
+.celsius {
+  font-size: 15px;
+  position: relative;
+  top: -32px;
+}
+.image {
+  font-size: 60px;
+  padding-right: 25px;
+  line-height: 1;
+}
+
+.btn-outline-primary {
+  font-size: 16px;
+}
+
+.search-form {
+  align-self: right;
+}
