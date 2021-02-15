@@ -3,6 +3,11 @@ function showTime() {
   let newDates = new Date();
   let hours = newDates.getHours();
   let minutes = newDates.getMinutes();
+  if (minutes < 10)
+  {minutes=`0${minutes}`;
+}
+  else {minutes = minutes;
+  }
   let days = [
     "Sunday",
     "Monday",
