@@ -5,11 +5,9 @@ body {
   margin: 80px;
   padding: 20px 0px 20px 0px;
 }
-
-h2 {
-  font-size: 36px;
+h1 {
+  color: rgb(18, 127, 199);
 }
-
 h3 {
   margin: 0;
 }
