@@ -20,7 +20,7 @@ ul {
 }
 
 .weather-app {
-  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/paper.png");
+  background-color: white;
   border: solid #abb6be 1px;
   border-radius: 10px;
   margin: 20px auto;
