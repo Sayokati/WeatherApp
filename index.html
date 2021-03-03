@@ -19,7 +19,27 @@
     <div class="cointainer">
         <div class="weather-app">
             <!--1st row -->
+
             
+            <div class="row">
+                <div class="row searchbar">
+                    <div class="col">
+                        <form id="search-form">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Enter a city..." id="city-entry" />
+                                <button class="btn btn-outline-secondary" type="submit" id="city-submit-button">
+                                    Search
+                                </button>
+                                <button class="btn btn-outline-secondary" type="button" id="current-location">
+                                    Current Location
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
+            <!-- 2nd Row -->
 
             
             <div class="row">
@@ -28,8 +48,8 @@
                 </div>
             </div>
 
-            <!-- 2nd Row -->
             
+            <!-- 3rd Row -->
             <div class="row">
                 <!-- left column-->
                 <div class="col-6">
@@ -47,8 +67,8 @@
                 </div>
             </div>
             <br />
-            <!-- 3rd Row -->
             
+            <!-- 4th Row  -->
             <div class="row">
                 <!-- left column-->
                 <div class="col-6">
@@ -66,12 +86,11 @@
 
             </div>
 
-            <br />
-            <br />
-            <br />
-            <!-- 4th Row  -->
             
-            <div class="row align-items-center">
+            
+            <!-- 5th Row -->
+            <div class="row align-items-end">
+                <form id="forcast-form">
                 <div class="col">
                     Sat
                     <br /><i class="fas fa-cloud"></i> <br />0°
@@ -84,36 +103,12 @@
                 <div class="col">
                     Mon
                     <br /><i class="fas fa-cloud-sun"></i> <br />6°
-                </div>
-                <div class="col">
-                    Tue
-                    <br /><i class="fas fa-sun"></i><br />7°
-                </div>
-                <div class="col">
-                    Wed
-                    <br /><i class="fas fa-cloud-showers-heavy"></i><br />4°
-                </div>
+                </div>                             
+                </form>
             </div>
             <br />
-            <br />
-            <br />
-            <!-- 5th Row -->
-            <div class="row">
-                <div class="row searchbar">
-                    <div class="col">
-                        <form id="search-form">
-                            <div class="input-group mb-3">
-                                <input type="text" class="form-control" placeholder="Enter a city..." id="city-entry" />
-                                <button class="btn btn-primary" type="submit" id="city-submit-button">
-                                    Search
-                                </button>
-                                <button class="btn btn-primary" type="button" id="current-location">
-                                    Current Location
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+            
+            
             </div>
         </div>
         <small>
