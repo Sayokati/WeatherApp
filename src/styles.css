@@ -17,7 +17,7 @@ h3 {
 ul {
   display: block;
   list-style-type: none;
-
+  text-transform: capitalize;
   padding: 0;
   font-size: 16px;
   font-weight: 100;
@@ -39,9 +39,10 @@ ul {
   width: 430px;
 }
 .actual-temperature {
-  font-size: 48px;
+  font-size: 40px;
   line-height: 1;
   text-align: center;
+  font-weight: bold;
 }
 .celsius {
   font-size: 15px;
@@ -50,7 +51,7 @@ ul {
 }
 
 .weather-temperature img {
-  margin: 10px;
+  margin: 0px;
   height: 90px;
   width: 90px;
 }

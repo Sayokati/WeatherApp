@@ -2,6 +2,9 @@ function showTime() {
   let dates = document.querySelector(".dates");
   let newDates = new Date();
   let hours = newDates.getHours();
+  if(hours < 10) {
+    hours = `0${hours}`;
+  }
   let minutes = newDates.getMinutes();
   if (minutes < 10)
   {minutes=`0${minutes}`;
@@ -31,7 +34,7 @@ function showTemperature(response) {
   let currentTemperature = document.querySelector("#temperature");
   currentTemperature.innerHTML = `${temperature}`;
 
-  let weatherStatus = response.data.weather[0].main;
+  let weatherStatus = response.data.weather[0].description;
   let weatherStat = document.querySelector("#weatherStatus");
   weatherStat.innerHTML = `${weatherStatus}`;
 
