@@ -46,28 +46,18 @@ ul {
 .celsius {
   font-size: 15px;
   position: relative;
-  top: -32px;
-}
-.image {
-  font-size: 60px;
-  padding-right: 25px;
-  line-height: 1;
+  top: -22px;
 }
 
+.weather-temperature img {
+  margin: 10px;
+  height: 90px;
+  width: 90px;
+}
 .btn-outline-primary {
   font-size: 16px;
 }
 
 .search-form {
   align-self: right;
-}
-
-.weather-temperature img {
-  margin: 10px;
-  height: 64px;
-  width: 64px;
-}
-
-.weather-temperature actual-temperature {
-  color: blue;
 }
