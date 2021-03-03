@@ -25,12 +25,15 @@ ul {
   margin-top: 30px;
 }
 
+.weather-app-wrapper {
+  margin: 30px auto;
+  max-width: 600px;
+}
 .weather-app {
   background-color: white;
   border: solid #abb6be 1px;
   border-radius: 10px;
-  margin: 30px auto;
-  max-width: 600px;
+
   padding: 20px;
   position: center;
   width: 430px;
@@ -57,4 +60,14 @@ ul {
 
 .search-form {
   align-self: right;
+}
+
+.weather-temperature img {
+  margin: 10px;
+  height: 64px;
+  width: 64px;
+}
+
+.weather-temperature actual-temperature {
+  color: blue;
 }
