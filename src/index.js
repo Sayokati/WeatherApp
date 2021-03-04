@@ -27,6 +27,7 @@ showTime();
 
 //week5
 function showTemperature(response) {
+  
   let h1 = document.querySelector("h1");
   h1.innerHTML = `${response.data.name}`;
 
@@ -45,6 +46,10 @@ function showTemperature(response) {
   let wind = response.data.wind.speed;
   let windSpeed = document.querySelector("#wind");
   windSpeed.innerHTML = `${wind}`;
+
+  
+  let iconInfo = document.querySelector("#icon");
+  iconInfo.setAttribute("src", `images/${response.icon}@2x.png`);
 }
 
 function showCity(city) {
