@@ -50,6 +50,13 @@ function showTemperature(response) {
   
   let iconInfo = document.querySelector("#icon");
   iconInfo.setAttribute("src", `images/${response.icon}@2x.png`);
+
+  iconElement.setAttribute("alt", response.data.weather[0].description);
+}
+
+function showForcast(response) {
+  let forcastElement = document.querySelector("#weather-forcast");
+  console.log(response.data);
 }
 
 function showCity(city) {
@@ -58,6 +65,9 @@ function showCity(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(showTemperature);
+
+  apiUrl = `api.openweathermap.org/data/2.5/forecast?q=${city},us&mode=xml&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(showForcast);
 }
 
 function searchCity(event) {
