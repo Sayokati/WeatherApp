@@ -55,14 +55,17 @@
                 <div class="row align-items-center">
                 <!-- left column-->
                 <div class="col">
-                    <h3 class="dates">Friday, 17:54</h3>
+                    <h3 class="dates"></h3>
                 </div>
                 
                 <!--right column -->
                 <div class="col">
                     <div class="clearfix weather-temperature">
                         <div class="float-left">
-                            <span class="actual-temperature" id="temperature"></span><span class="celsius">°C</span>
+                            <span class="actual-temperature" id="temperature"></span><span class="units">
+                                <a href="#" id="celsius-link" class="active">°C</a> |
+                                <a href="#" id="fahrenheit-link">°F</a>
+                            </span>
                             <img src="" 
                             alt=""
                             id="icon"
@@ -100,7 +103,7 @@
             
             
             <!-- 5th Row -->
-            <div class="row align-items-end">
+            <div class="row align-items-end" id="weather-forcast">
                 
                 <div class="col">
                     Sat
