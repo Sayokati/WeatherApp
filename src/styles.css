@@ -4,6 +4,7 @@ body {
   font-family: "Open Sans", sans-serif;
   margin: 0auto;
   padding: 20px 0px 20px 0px;
+  background: linear-gradient(to right, #dae2f8, #d6a4a4);
 }
 h1 {
   color: black;
@@ -30,7 +31,7 @@ ul {
   max-width: 600px;
 }
 .weather-app {
-  background-color: white;
+  background: linear-gradient(to right, #ece9e6, #ffffff);
   border: solid #abb6be 1px;
   border-radius: 10px;
 
