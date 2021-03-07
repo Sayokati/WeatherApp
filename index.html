@@ -1,138 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>WeatherApp</title>
 
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://kit.fontawesome.com/204bc1cc89.js"
-      crossorigin="anonymous"
-    ></script>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="src/styles.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>WeatherApp</title>
 
-  <body>
-    <div class="cointainer">
-      <div class="weather-app-wrapper">
-        <div class="weather-app">
-          <!--1st row -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/204bc1cc89.js" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="src/styles.css" />
+</head>
 
-          <div class="row">
-            <div class="row searchbar">
-              <div class="col">
-                <form id="search-form">
-                  <div class="input-group">
-                    <input
-                      type="text"
-                      class="form-control"
-                      placeholder="Enter a city..."
-                      id="city-entry"
-                    />
-                    <button
-                      class="btn btn-outline-secondary"
-                      type="submit"
-                      id="city-submit-button"
-                    >
-                      Search
-                    </button>
-                    <button
-                      class="btn btn-outline-secondary"
-                      type="button"
-                      id="current-location"
-                    >
-                      Current Location
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
+<body>
+  <div class="cointainer">
+    <div class="weather-app-wrapper">
+      <div class="weather-app">
+        <!--1st row -->
 
-            <!-- 2nd Row -->
-
-            <div class="row">
-              <div class="col">
-                <h1 id="city"></h1>
-              </div>
-            </div>
-
-            <!-- 3rd Row -->
-            <div class="row">
-              <div class="row align-items-center">
-                <!-- left column-->
-                <div class="col">
-                  <h3 class="dates"></h3>
+        <div class="row">
+          <div class="row searchbar">
+            <div class="col">
+              <form id="search-form">
+                <div class="input-group">
+                  <input type="text" class="form-control" placeholder="Enter a city..." id="city-entry" />
+                  <button class="btn btn-outline-secondary" type="submit" id="city-submit-button">
+                    Search
+                  </button>
+                  <button class="btn btn-outline-secondary" type="button" id="current-location">
+                    Current Location
+                  </button>
                 </div>
-
-                <!--right column -->
-                <div class="col">
-                  <div class="clearfix weather-temperature">
-                    <div class="float-left">
-                      <span class="actual-temperature" id="temperature"></span
-                      ><span class="celsius">°C</span>
-                      <img src="" alt="" id="icon" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br />
-
-            <!-- 4th Row  -->
-            <div class="row">
-              <div class="row align-items-start">
-                <!-- left column-->
-                <div class="col-6">
-                  <ul>
-                    <li><span id="weatherStatus"></span></li>
-                    <li>Humidity: <span id="humidity">83</span>%</li>
-                    <li>Wind: <span id="wind">10</span>km/h</li>
-                  </ul>
-                </div>
-
-                <!--Right column -->
-              </div>
-
-              <!-- 5th Row -->
-              <div class="row align-items-end">
-                <div class="col">
-                  Sat
-                  <br /><i class="fas fa-cloud"></i> <br />0°
-                </div>
-                <div class="col">
-                  Sun
-                  <br /><i class="fas fa-cloud-sun"></i> <br />
-                  1°
-                </div>
-                <div class="col">
-                  Mon
-                  <br /><i class="fas fa-cloud-sun"></i> <br />6°
-                </div>
-              </div>
-              <br />
+              </form>
             </div>
           </div>
+
+          <!-- 2nd Row -->
+
+          <div class="row">
+            <div class="col">
+              <h1 id="city"></h1>
+            </div>
+          </div>
+
+          <!-- 3rd Row -->
+          <div class="row">
+            <div class="row align-items-center">
+              <!-- left column-->
+              <div class="col">
+                <h3 class="dates"></h3>
+              </div>
+
+              <!--right column -->
+              <div class="col">
+                <div class="clearfix weather-temperature">
+                  <div class="float-left">
+                    <span class="actual-temperature" id="temperature"></span>
+                    <span class="units"><a href="#" id="celsius-link" class="active">°C</a> |
+                      <a href="#" id="fahrenheit-link">°F</a></span>
+                    <img src="" alt="" id="icon" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <br />
+
+          <!-- 4th Row  -->
+          <div class="row">
+            <div class="row align-items-start">
+              <!-- left column-->
+              <div class="col-6">
+                <ul>
+                  <li><span id="weatherStatus"></span></li>
+                  <li>Humidity: <span id="humidity"></span>%</li>
+                  <li>Wind: <span id="wind"></span>km/h</li>
+                </ul>
+              </div>
+
+              <!--Right column -->
+            </div>
+
+            <!-- 5th Row -->
+            <div class="row align-items-end-weather-forcast" id="forecast"></div>
+            <br />
+          </div>
         </div>
-        <small>
-          <a href="https://github.com/Sayokati/WeatherApp" target="_blank"
-            >Open-source code</a
-          >
-          by Katarzyna Światłowska
-        </small>
       </div>
-      <script src="src/index.js"></script>
+      <small>
+        <a href="https://github.com/Sayokati/WeatherApp" target="_blank">Open-source code</a>
+        by Katarzyna Światłowska
+      </small>
     </div>
-  </body>
+    <script src="src/index.js"></script>
+  </div>
+</body>
+
 </html>
