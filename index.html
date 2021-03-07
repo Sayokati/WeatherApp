@@ -80,8 +80,11 @@
                 <div class="col">
                   <div class="clearfix weather-temperature">
                     <div class="float-left">
-                      <span class="actual-temperature" id="temperature"></span
-                      ><span class="celsius">°C</span>
+                      <span class="actual-temperature" id="temperature"></span>
+                      <span class="units"
+                        ><a href="#" id="celsius-link" class="active">°C</a> |
+                        <a href="#" id="fahrenheit-link">°F</a></span
+                      >
                       <img src="" alt="" id="icon" />
                     </div>
                   </div>
@@ -97,8 +100,8 @@
                 <div class="col-6">
                   <ul>
                     <li><span id="weatherStatus"></span></li>
-                    <li>Humidity: <span id="humidity">83</span>%</li>
-                    <li>Wind: <span id="wind">10</span>km/h</li>
+                    <li>Humidity: <span id="humidity"></span>%</li>
+                    <li>Wind: <span id="wind"></span>km/h</li>
                   </ul>
                 </div>
 
@@ -106,21 +109,10 @@
               </div>
 
               <!-- 5th Row -->
-              <div class="row align-items-end">
-                <div class="col">
-                  Sat
-                  <br /><i class="fas fa-cloud"></i> <br />0°
-                </div>
-                <div class="col">
-                  Sun
-                  <br /><i class="fas fa-cloud-sun"></i> <br />
-                  1°
-                </div>
-                <div class="col">
-                  Mon
-                  <br /><i class="fas fa-cloud-sun"></i> <br />6°
-                </div>
-              </div>
+              <div
+                class="row align-items-end-weather-forcast"
+                id="forecast"
+              ></div>
               <br />
             </div>
           </div>
