@@ -26,13 +26,17 @@ function showTime() {
 showTime();
 
 //week5
+let celsiusTemperature = null;
+let fahrenheitTemperature = null;
+
 function showTemperature(response) {
   let h1 = document.querySelector("h1");
   h1.innerHTML = `${response.data.name}`;
 
-  let temperature = Math.round(response.data.main.temp);
+  let temperature = response.data.main.temp;
+  celsiusTemperature =temperature;
   let currentTemperature = document.querySelector("#temperature");
-  currentTemperature.innerHTML = `${temperature}`;
+  currentTemperature.innerHTML = Math.round(temperature);
 
   let weatherStatus = response.data.weather[0].description;
   let weatherStat = document.querySelector("#weatherStatus");
@@ -158,7 +162,7 @@ function showCelsiusTemperature(event) {
   currentTemperature.innerHTML = Math.round(celsiusTemperature);
 }
 
-let celsiusTemperature = null;
+
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
