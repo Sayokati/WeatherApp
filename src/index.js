@@ -52,6 +52,7 @@ function showTemperature(response) {
     `images/${response.data.weather[0].icon}@2x.png`
   );
 }
+//forecast
 function showForecast(response) {
 
   let forecastStatus = document.querySelector("#forecast");
@@ -59,6 +60,7 @@ function showForecast(response) {
   forecastStatus.innerHTML = null;
 
   let forecast = null;
+  
 
   for (let index = 0; index < 6; index++) {
 
@@ -71,7 +73,7 @@ function showForecast(response) {
         ${formatHours(forecast.dt * 1000)}
       </h4>
       <img
-        src=`images/${response.data.weather[0].icon}@2x.png`
+        src="images/${response.data.weather[0].icon}@2x.png" alt=""
       />
       <div class="row align-items-end-weather-forcast">
         <strong>
